@@ -1,11 +1,21 @@
 # Prepare the Environment
 [中文文档](./install_guide-zh.md)
-
 This guide is about building a python environment for MimicTalk with Conda (the same as `Real3D-Portrait`).
 
+0- Clone repo
+```bash
+git clone https://github.com/yerfor/MimicTalk.git
+```
+
+1- Install Conda (miniconda)
+```bash
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+```
+ 
 The following installation process is verified in A100/V100 + CUDA12.1.
 
-# Install Python Packages & CUDA
+2- Install Python Packages & CUDA
 ```bash
 cd <MimicTalkRoot>
 source <CondaRoot>/bin/activate
@@ -23,5 +33,6 @@ mim install mmcv==2.1.0 # use mim to speed up installation for mmcv
 ## It may take a long time (maybe tens of minutes), Proxy is recommended if encountering the time-out problem
 # Before install pytorch3d, you need to install CUDA-12.1 (https://developer.nvidia.com/cuda-toolkit-archive) and make sure /usr/local/cuda points to the `cuda-12.1` directory
 pip install "git+https://github.com/facebookresearch/pytorch3d.git@stable"
-
+## if building fails or takes too long
+conda install pytorch3d::pytorch3d
 ```
