@@ -19,6 +19,8 @@ git clone https://github.com/yerfor/MimicTalk.git
 ```bash
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
+# Before install pytorch3d, you need to install CUDA-12.1 
+# and make sure /usr/local/cuda points to the `cuda-12.1` directory
 ```
 
 The following installation process is verified in A100/V100 + CUDA12.1.
@@ -41,7 +43,6 @@ pip install openmim==0.3.9
 mim install mmcv==2.1.0 # use mim to speed up installation for mmcv
 ## build pytorch3d from Github's source code. 
 ## It may take a long time (maybe tens of minutes), Proxy is recommended if encountering the time-out problem
-# Before install pytorch3d, you need to install CUDA-12.1 (https://developer.nvidia.com/cuda-toolkit-archive) and make sure /usr/local/cuda points to the `cuda-12.1` directory
 pip install "git+https://github.com/facebookresearch/pytorch3d.git@stable"
 ## if building fails or takes too long
 conda install pytorch3d::pytorch3d
