@@ -12,6 +12,14 @@ git clone https://github.com/yerfor/MimicTalk.git
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
+
+```bash
+sudo apt-get update
+sudo apt-get install build-essential
+pip install pyworld webrtcvad
+pip install --upgrade pip
+conda install pyaudio:pyaudio
+```
  
 The following installation process is verified in A100/V100 + CUDA12.1.
 
