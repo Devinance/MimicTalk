@@ -2,28 +2,28 @@
 [中文文档](./install_guide-zh.md)
 This guide is about building a python environment for MimicTalk with Conda (the same as `Real3D-Portrait`).
 
-0- Clone repo
+0- Update system and build tools
+```bash
+pip install --upgrade pip
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install build-essential
+```
+
+1- Clone repo
 ```bash
 git clone https://github.com/yerfor/MimicTalk.git
 ```
 
-1- Install Conda (miniconda)
+2- Install Conda (miniconda)
 ```bash
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
 
-```bash
-sudo apt-get update
-sudo apt-get install build-essential
-pip install pyworld webrtcvad
-pip install --upgrade pip
-conda install pyaudio:pyaudio
-```
- 
 The following installation process is verified in A100/V100 + CUDA12.1.
 
-2- Install Python Packages & CUDA
+3- Install Python Packages & CUDA
 ```bash
 cd <MimicTalkRoot>
 source <CondaRoot>/bin/activate
@@ -32,6 +32,8 @@ conda activate mimictalk
 
 # MMCV for SegFormer network structure
 # other dependencies
+pip install pyworld webrtcvad
+conda install pyaudio:pyaudio
 pip install -r docs/prepare_env/requirements.txt -v
 pip install torch==2.4.0 torchvision==0.19.0 torchaudio==2.4.0 --index-url https://download.pytorch.org/whl/cu121
 pip install cython
