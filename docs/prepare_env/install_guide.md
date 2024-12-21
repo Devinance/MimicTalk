@@ -16,8 +16,8 @@ sudo apt-get install build-essential
 
 2- Install Conda (miniconda)
 ```bash
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-bash Miniconda3-latest-Linux-x86_64.sh
+wget https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh
+bash Anaconda3-2024.10-1-Linux-x86_64.sh
 pip install --upgrade pip
 # Before install pytorch3d, you need to install CUDA-12.1 
 # and make sure /usr/local/cuda points to the `cuda-12.1` directory
