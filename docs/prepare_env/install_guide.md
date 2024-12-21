@@ -19,6 +19,10 @@ sudo apt-get install build-essential
 wget https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh
 bash Anaconda3-2024.10-1-Linux-x86_64.sh
 pip install --upgrade pip
+```
+
+3- Install CUDA 12.1 & Additional packages
+```bash
 # Before install pytorch3d, you need to install CUDA-12.1 
 # and make sure /usr/local/cuda points to the `cuda-12.1` directory
 ```
