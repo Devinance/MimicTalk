@@ -11,19 +11,7 @@ sudo apt-get upgrade
 sudo apt-get install build-essential
 ```
 
-1- Clone repo
-```bash
-git clone https://github.com/Devinance/MimicTalk.git
-```
-
-2- Install Conda (miniconda)
-```bash
-wget https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh
-bash Anaconda3-2024.10-1-Linux-x86_64.sh
-pip install --upgrade pip
-```
-
-3- Install CUDA 12.1 & Additional packages
+1- Install CUDA 12.1 & Additional packages
 ```bash
 # Before install pytorch3d, you need to install CUDA-12.1 
 # and make sure /usr/local/cuda points to the `cuda-12.1` directory
@@ -31,6 +19,18 @@ wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/
 sudo dpkg -i cuda-keyring_1.0-1_all.deb
 sudo apt-get update
 sudo apt-get -y install cuda
+```
+
+2- Clone repo
+```bash
+git clone https://github.com/Devinance/MimicTalk.git
+```
+
+3- Install Conda (miniconda)
+```bash
+wget https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh
+bash Anaconda3-2024.10-1-Linux-x86_64.sh
+pip install --upgrade pip
 ```
 
 4- Install Python Packages & CUDA
