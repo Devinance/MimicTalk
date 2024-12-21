@@ -27,9 +27,13 @@ pip install --upgrade pip
 ```bash
 # Before install pytorch3d, you need to install CUDA-12.1 
 # and make sure /usr/local/cuda points to the `cuda-12.1` directory
+wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-keyring_1.0-1_all.deb
+sudo dpkg -i cuda-keyring_1.0-1_all.deb
+sudo apt-get update
+sudo apt-get -y install cuda
 ```
 
-3- Install Python Packages & CUDA
+4- Install Python Packages & CUDA
 ```bash
 cd <MimicTalkRoot>
 source <CondaRoot>/bin/activate
