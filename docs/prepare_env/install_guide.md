@@ -4,7 +4,6 @@ This guide is about building a python environment for MimicTalk with Conda (the 
 
 0- Update system and build tools
 ```bash
-pip install --upgrade pip
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install build-essential
@@ -19,6 +18,7 @@ git clone https://github.com/yerfor/MimicTalk.git
 ```bash
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
+pip install --upgrade pip
 # Before install pytorch3d, you need to install CUDA-12.1 
 # and make sure /usr/local/cuda points to the `cuda-12.1` directory
 ```
@@ -31,6 +31,7 @@ cd <MimicTalkRoot>
 source <CondaRoot>/bin/activate
 conda create -n mimictalk python=3.9
 conda activate mimictalk
+pip install --upgrade pip
 
 # MMCV for SegFormer network structure
 # other dependencies
