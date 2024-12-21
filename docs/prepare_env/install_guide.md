@@ -52,6 +52,7 @@ pip install openmim==0.3.9
 mim install mmcv==2.1.0 # use mim to speed up installation for mmcv
 ## build pytorch3d from Github's source code. 
 ## It may take a long time (maybe tens of minutes), Proxy is recommended if encountering the time-out problem
+conda install -c fvcore -c iopath -c conda-forge fvcore
 pip install "git+https://github.com/facebookresearch/pytorch3d.git@stable"
 ## if building fails or takes too long
 conda install pytorch3d::pytorch3d
