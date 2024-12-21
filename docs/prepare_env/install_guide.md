@@ -1,3 +1,5 @@
+The following installation process is verified in A100/V100 + CUDA12.1.
+
 # Prepare the Environment
 [中文文档](./install_guide-zh.md)
 This guide is about building a python environment for MimicTalk with Conda (the same as `Real3D-Portrait`).
@@ -26,8 +28,6 @@ pip install --upgrade pip
 # Before install pytorch3d, you need to install CUDA-12.1 
 # and make sure /usr/local/cuda points to the `cuda-12.1` directory
 ```
-
-The following installation process is verified in A100/V100 + CUDA12.1.
 
 3- Install Python Packages & CUDA
 ```bash
