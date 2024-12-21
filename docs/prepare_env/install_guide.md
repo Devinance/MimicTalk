@@ -13,7 +13,7 @@ sudo apt-get install build-essential
 
 1- Clone repo
 ```bash
-[git clone https://github.com/yerfor/MimicTalk.git](https://github.com/Devinance/MimicTalk.git)
+git clone https://github.com/Devinance/MimicTalk.git
 ```
 
 2- Install Conda (miniconda)
